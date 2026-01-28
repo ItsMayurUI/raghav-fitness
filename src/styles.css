@@ -1,1 +1,51 @@
-/* You can add global styles to this file, and also import other style files */
+/* font */
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+p {
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+button, a {
+  font-weight: 500;
+}
+
+/* for smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.2s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+

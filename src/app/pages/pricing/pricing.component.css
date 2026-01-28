@@ -1,0 +1,59 @@
+.pricing {
+  background: black;
+  color: white;
+  padding: 80px 60px;
+  text-align: center;
+}
+
+.pricing h2 {
+  font-size: 40px;
+  margin-bottom: 50px;
+  color: #f5c400;
+}
+
+.pricing-box {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.plan {
+  background: #1c1c1c;
+  padding: 40px 30px;
+  width: 280px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.plan h3 {
+  color: #e6ff28;
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.plan button {
+  background: #e6ff28;
+  color: rgb(0, 0, 0);
+  padding: 12px 25px;
+  border: none;
+}
+
+.popular {
+  border: 2px solid #f5c400;
+}
+
+.badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #f5c400;
+  color: black;
+  padding: 5px 10px;
+  font-size: 12px;
+}

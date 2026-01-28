@@ -1,0 +1,89 @@
+.hero {
+  height: 90vh;
+  background: linear-gradient(
+      rgba(0,0,0,0.7),
+      rgba(0,0,0,0.7)
+    ),
+    url('https://images.unsplash.com/photo-1558611848-73f7eb4001a1') center/cover;
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
+}
+
+.hero-content {
+  color: #fff;
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 60px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  padding: 14px 28px;
+  margin-right: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.primary {
+  background: #bcff00;
+  color: rgb(0, 0, 0);
+}
+
+.secondary {
+  border: 2px solid #96998c;
+  color: #bcff00;
+}
+
+/* program section css */
+.programs {
+  background: #111;
+  color: white;
+  padding: 80px 60px;
+  text-align: center;
+}
+
+.programs h2 {
+  font-size: 40px;
+  margin-bottom: 50px;
+  color: #ffffff;
+}
+
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.program-card {
+  background: #1c1c1c;
+  padding: 30px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.program-card:hover {
+  transform: translateY(-10px);
+  border-top: 4px solid rgb(255, 255, 255);
+}
+
+.program-card h3 {
+  color: #bcff00;
+  margin-bottom: 15px;
+}
+
+.program-card button {
+  margin-top: 20px;
+  background: #bcff00;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+}

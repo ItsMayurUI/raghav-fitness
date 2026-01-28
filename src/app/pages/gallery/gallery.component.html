@@ -1,0 +1,22 @@
+<section class="gallery reveal">
+  <h2>Our <span class="yellow">Gallery</span></h2>
+
+  <div class="gallery-grid">
+    <div
+      class="gallery-item"
+      *ngFor="let img of images"
+      (click)="openLightbox(img)"
+    >
+      <img [src]="img" alt="Raghav Fitness Gallery" />
+      <div class="overlay">
+        <span>View</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" *ngIf="selectedImage" (click)="closeLightbox()">
+  <img [src]="selectedImage" />
+  <span class="close">✕</span>
+</div>

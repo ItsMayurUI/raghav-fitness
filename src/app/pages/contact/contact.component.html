@@ -1,0 +1,55 @@
+<section class="contact reveal">
+  <h2>Contact <span class="yellow">Raghav Fitness</span></h2>
+
+  <div class="contact-container">
+
+    <!-- LEFT: INFO -->
+    <div class="contact-info">
+      <h3>Get In Touch</h3>
+
+      <p>📍 Bhusawal, Maharashtra</p>
+      <p>📞 <a href="tel:9999999999">+91 99999 99999</a></p>
+      <p>💬 <a href="https://wa.me/919999999999" target="_blank">Chat on WhatsApp</a></p>
+
+      <div class="timings">
+        <h4>⏰ Gym Timings</h4>
+        <p>Monday – Sunday</p>
+        <p>Morning: 5:00 AM – 11:00 AM</p>
+        <p>Evening: 4:00 PM – 10:00 PM</p>
+      </div>
+
+      <div class="batches">
+        <h4>🏋️ Training Batches</h4>
+        <ul>
+          <li>5:00 AM – 6:30 AM</li>
+          <li>6:30 AM – 8:00 AM</li>
+          <li>8:00 AM – 9:30 AM</li>
+          <li>4:00 PM – 6:00 PM</li>
+          <li>6:00 PM – 8:00 PM</li>
+          <li>8:00 PM – 10:00 PM</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- RIGHT: FORM -->
+    <div class="contact-form">
+      <h3>Send Enquiry</h3>
+
+      <form (ngSubmit)="submitForm()">
+        <input type="text" placeholder="Your Name" required />
+        <input type="tel" placeholder="Phone Number" required />
+        <textarea rows="4" placeholder="Your Message"></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- MAP -->
+  <div class="map">
+    <iframe
+      src="https://www.google.com/maps?q=Pune,Maharashtra&output=embed"
+      loading="lazy"
+    ></iframe>
+  </div>
+</section>
