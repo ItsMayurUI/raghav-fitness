@@ -1,5 +1,5 @@
 .hero {
-  height: 90vh;
+  min-height: 90vh; /* ✅ instead of height */
   background: linear-gradient(
       rgba(0,0,0,0.7),
       rgba(0,0,0,0.7)
@@ -7,8 +7,9 @@
     url('https://images.unsplash.com/photo-1558611848-73f7eb4001a1') center/cover;
   display: flex;
   align-items: center;
-  padding-left: 60px;
+  padding: 0 60px;
 }
+
 
 .hero-content {
   color: #fff;
@@ -87,3 +88,45 @@
   padding: 12px 20px;
   cursor: pointer;
 }
+
+/* mobile view css */
+@media (max-width: 768px) {
+
+  .hero {
+    min-height: auto;
+    padding: 90px 18px 70px;   /* tighter vertical spacing */
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 34px;          /* slightly smaller */
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+
+  .hero p {
+    font-size: 15px;
+    margin-bottom: 26px;
+    opacity: 0.9;
+  }
+
+  /* Buttons polish */
+  .hero .btn {
+    display: block;
+    width: 100%;
+    padding: 13px 0;          /* ⬅️ reduced height */
+    margin: 10px 0;
+    border-radius: 6px;       /* cleaner look */
+    font-size: 15px;
+  }
+
+  .secondary {
+    border-width: 1.5px;      /* lighter border */
+  }
+}
+

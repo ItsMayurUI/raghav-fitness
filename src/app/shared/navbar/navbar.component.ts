@@ -13,7 +13,10 @@ export class NavbarComponent {
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
   }
-
+  closeMenu() {
+  this.menuOpen = false;
+  }
+  
   @HostListener('window:scroll', [])
   onScroll() {
     this.isSticky = window.pageYOffset > 80;

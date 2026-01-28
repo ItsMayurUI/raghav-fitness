@@ -5,6 +5,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  position: relative;
+  z-index: 10;
 }
 
 .navbar ul {
@@ -42,4 +45,100 @@
 .navbar ul li a.active {
   color: #bcff00;        /* yellow */
   border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+/* Hamburger */
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  .menu-icon {
+  display: none;
+  width: 30px;
+  height: 22px;
+  position: relative;
+  cursor: pointer;
+  }
+
+  .menu-icon span {
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  border-radius: 3px;
+  transition: 0.4s ease;
+  }
+
+  /* Lines position */
+.menu-icon span:nth-child(1) {
+  top: 0;
+}
+.menu-icon span:nth-child(2) {
+  top: 9px;
+}
+.menu-icon span:nth-child(3) {
+  top: 18px;
+}
+
+/* OPEN (X) state */
+.menu-icon.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 9px;
+}
+.menu-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+.menu-icon.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 9px;
+}
+
+/* Show hamburger only on mobile */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+}
+
+  .navbar ul {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background: #000;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+
+    transition: all 0.4s ease-in-out;
+  }
+
+  .navbar ul.active {
+    max-height: 400px;
+    opacity: 1;
+    padding: 20px 0;
+  }
+}
+
+/* Blur overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  z-index: 9;
 }
